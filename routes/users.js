@@ -6,9 +6,10 @@ var appSecret = 'appSecret';
 var router = express.Router();
 var sess 
 
-/* GET users listing. */
+
+/* GET user's dashboard. */
 router.get('/', function(req, res, next) {
-  res.redirect('/dashboard');
+  res.redirect('/users/dashboard');
   });
 
 
@@ -66,7 +67,14 @@ router.post('/login', function(req, res, next){
 
 /* GET register */
 router.get('/signup', function(req, res, next){
-	res.render('signup');
+		sess = req.session;
+
+	if (sess.email){
+		// session exists
+		res.render('dashboard', {loggedin: true});
+	}else{
+		res.render('signup');
+	}
 });
 
 
@@ -114,6 +122,7 @@ router.post('/signup', function(req, res, next){
 		}
 	});
 
+	mongoose.connections.close();
 });
 
 

@@ -25,5 +25,8 @@ orderSchema = Schema({
 	receiversinfo: {
 		adds: String,
 		zip: String
+	},
+	deliversinfo:{
+		email: String
 	}
 });

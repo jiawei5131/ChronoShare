@@ -6,7 +6,6 @@ var logger = require('morgan');
 //var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-var mongoose = require('mongoose');
 
 var db = require('./config/db');
 
@@ -18,6 +17,7 @@ var about = require('./routes/about');
 var contact = require('./routes/contact');
 var dashboard = require('./routes/dashboard');
 var adminview = require('./routes/adminview');
+var orders = require('./routes/orders');
 
 var app = express();
 
@@ -39,14 +39,12 @@ app.use(session({secret: 'alskjdfoi2j3oj231312nsfkasj',
                 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// connect to mongodb local server
-mongoose.connect('mongodb://localhost');
-
 app.use('/', routes);
 app.use('/users', users);
 app.use('/users/delivers', delivers);
 app.use('/users/receivers', receivers);
 app.use('/users/dashboard', dashboard);
+app.use('/users/orders', orders);
 app.use('/about', about);
 app.use('/contact', contact);
 app.use('/adminview', adminview);

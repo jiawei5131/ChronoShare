@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var router = express.Router();
 var sess;
 
+
 /* GET receivers page. */
 router.get('/', function(req, res, next) {
   sess = req.session;
