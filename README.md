@@ -11,7 +11,7 @@ $ npm install
 ## Run database server (Please make sure that mongoDB is installed)
 
 ```bash
-$ mkdir data; mongo ./data
+$ mkdir data; mongod --dbpath ./data
 ```
 
 
