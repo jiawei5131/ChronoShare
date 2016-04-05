@@ -56,7 +56,7 @@ router.post('/login', function(req, res, next){
 
     	sess.email = user.email;
 
-      res.render('dashboard', {loggedin: true});
+      res.render('loginwelcome', {loggedin: true});
     }
   });
 
@@ -106,9 +106,8 @@ router.post('/signup', function(req, res, next){
 			if (err.code === 11000){
 				error = "That email has been registered."
 				res.render('signup', {error: error});
-			}else{
-				res.render('signup', {error: error});
 			}
+			res.render('signup', {error: error});
 		}else{
 			var note = "You are now a member."
 			res.render('login', {note : note});

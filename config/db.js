@@ -12,4 +12,18 @@ userSchema = Schema({
 		firstname: String,
 		lastname: String
 	}
-})
+});
+
+orderSchema = Schema({
+	email: String,
+	iteminfo: {
+		item: String,
+		price: Number,
+		store_location: String,
+		store_zip: String
+	},
+	receiversinfo: {
+		adds: String,
+		zip: String
+	}
+});

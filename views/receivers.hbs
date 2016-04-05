@@ -15,18 +15,24 @@
 
           <!-- Enter the item you want -->
           <h2>What do you want?</h2>
+
+          <!-- Display errors -->
+          {{#if error}}
+            <h3 id="error">{{error}}</h3>
+          {{/if}}
+
           <div class="input-group">
             <span class="input-group-addon">Item</span>
-            <input type="text" class="form-control" placeholder="what item you want?" name="storeitem">
+            <input type="text" class="form-control" placeholder="what item you want?" name="storeitem" required>
             <span class="input-group-addon">Price</span>
-            <input type="text" class="form-control" placeholder="how much it costs?" name="storeitem_price">
+            <input type="text" class="form-control" placeholder="how much it costs?" name="storeitem_price" required>
           </div>
           <div class="input-group">
             <span class="input-group-addon">Store Location</span>
-            <input type="text" class="form-control" placeholder="please enter the store address" name="storeadds">
+            <input type="text" class="form-control" placeholder="please enter the store address" name="storeadds" required>
           </div>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="store Zip code" name="storezip">
+            <input type="text" class="form-control" placeholder="store Zip code" name="storezip" required>
             <span class="input-group-addon">Zipcode</span>
           </div>
         </div>
@@ -37,10 +43,10 @@
           <h2>Where you are?</h2>
           <div class="input-group">
             <span class="input-group-addon">Current Location</span>
-            <input type="text" class="form-control" placeholder="please enter your address" name="receiversadds">
+            <input type="text" class="form-control" placeholder="please enter your address" name="receiversadds" required>
           </div>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Zip code" name="receiverszip">
+            <input type="text" class="form-control" placeholder="Zip code" name="receiverszip" required>
             <span class="input-group-addon">Zipcode</span>
           </div>
         </div>

@@ -34,7 +34,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(cookieParser());
 app.use(session({secret: 'alskjdfoi2j3oj231312nsfkasj',
                  saveUninitialized: true,
-                 resave: true}));
+                 resave: true,
+                 cookie: {maxAge: 15 * 60 * 1000} // cookie age 15 mins
+                }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // connect to mongodb local server
@@ -48,7 +50,6 @@ app.use('/users/dashboard', dashboard);
 app.use('/about', about);
 app.use('/contact', contact);
 app.use('/adminview', adminview);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
