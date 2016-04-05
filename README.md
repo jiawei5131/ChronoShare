@@ -28,3 +28,12 @@ open your browser and type
 ```bash
 http://localhost:3000
 ```
+
+## Access the database server
+
+To access users database
+
+```bash
+$ mongo
+$ db.users.find()
+```
