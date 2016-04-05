@@ -20,3 +20,11 @@ $ mkdir data; mongod --dbpath ./data
 ```bash
 $ node bin/www
 ```
+
+## Access the website
+
+open your browser and type
+
+```bash
+http://localhost:3000
+```
