@@ -9,76 +9,49 @@
 <!-- Articles -->
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
-      <h2>Choose The Item(s)</h2>
+    <form role="form" action="/users/receivers" method="post">
+      <fieldset>
+          <div class="col-md-4">
 
-      <div class="btn-group">
-        <button type="button" class="btn btn-lg btn-default">Foods &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
-        <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
-        <ul class="dropdown-menu" role="menu">
-          <li role="presentation" class="dropdown-header">Dropdown header 1</li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">First Link</a></li>
-          <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled Link</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated Link</a></li>
-        </ul>
-      </div>
-      <div class="btn-group">
-        <button type="button" class="btn btn-lg btn-default">Commodities </button>
-        <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
-        <ul class="dropdown-menu" role="menu">
-          <li role="presentation" class="dropdown-header">Dropdown header 1</li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">First Link</a></li>
-          <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled Link</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated Link</a></li>
-        </ul>
-      </div>
-      <div class="btn-group">
-        <button type="button" class="btn btn-lg btn-default">Apparels &nbsp; &nbsp; &nbsp; </button>
-        <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
-        <ul class="dropdown-menu" role="menu">
-          <li role="presentation" class="dropdown-header">Dropdown header 1</li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">First Link</a></li>
-          <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled Link</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated Link</a></li>
-        </ul>
-      </div>
-      <div class="btn-group">
-        <button type="button" class="btn btn-lg btn-default">Others &nbsp; &nbsp; &nbsp; &nbsp; </button>
-        <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
-        <ul class="dropdown-menu" role="menu">
-          <li role="presentation" class="dropdown-header">Dropdown header 1</li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">First Link</a></li>
-          <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled Link</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated Link</a></li>
-        </ul>
-      </div>
-      <p><a class="btn btn-primary" href="#" role="button">Next »</a></p>
-    </div>
-    <div class="col-md-4">
-      <h2>Enter Your Address</h2>
-      <p>Please enter the following information:</p>
-      <div>
-        <div class="input-group"><span class="input-group-addon">Your Address</span>
-          <input type="text" class="form-control" placeholder="normal sized input group">
-        </div>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="placeholder content">
-          <span class="input-group-addon">Zipcode</span></div>
-          <div class="input-group"><span class="input-group-addon">Phone#</span>
-            <input type="text" class="form-control" placeholder="placeholder content">
+          <!-- Enter the item you want -->
+          <h2>What do you want?</h2>
+          <div class="input-group">
+            <span class="input-group-addon">Item</span>
+            <input type="text" class="form-control" placeholder="what item you want?" name="storeitem">
+            <span class="input-group-addon">Price</span>
+            <input type="text" class="form-control" placeholder="how much it costs?" name="storeitem_price">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon">Store Location</span>
+            <input type="text" class="form-control" placeholder="please enter the store address" name="storeadds">
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="store Zip code" name="storezip">
+            <span class="input-group-addon">Zipcode</span>
           </div>
         </div>
-        <p><a class="btn btn-primary" href="#" role="button">Next »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Click Yes Button</h2>
-        <p>Now, it's time to double check your order. The final step is clicking "YES" Button</p>
-        <p><br>
-        </p>
-        <a type="button" class="btn btn-lg btn-primary" href="./Dflow2.html">Yes </a>
-      </div>
-    </div>
+
+        <div class="col-md-4">
+
+          <!-- Enter Your Address -->
+          <h2>Where you are?</h2>
+          <div class="input-group">
+            <span class="input-group-addon">Current Location</span>
+            <input type="text" class="form-control" placeholder="please enter your address" name="receiversadds">
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Zip code" name="receiverszip">
+            <span class="input-group-addon">Zipcode</span>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <h2>Click Yes Button</h2>
+          <p>Now, it's time to double check your order. The final step is clicking "YES" Button</p>
+          <input type='submit' value='Yes' class="btn btn-lg btn-primary">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
