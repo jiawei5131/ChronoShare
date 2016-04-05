@@ -56,6 +56,7 @@ router.post('/login', function(req, res, next){
     	sess = req.session;
 
     	sess.email = user.email;
+    	sess.password = user.password;
 
       res.render('loginwelcome', {loggedin: true});
     }
@@ -121,8 +122,6 @@ router.post('/signup', function(req, res, next){
 			res.render('login', {note : note});
 		}
 	});
-
-	mongoose.connections.close();
 });
 
 
