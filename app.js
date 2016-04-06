@@ -23,6 +23,7 @@ var adminview = require('./routes/adminview');
 var ordersplaced = require('./routes/ordersplaced');
 var ordersdelivered = require('./routes/ordersdelivered')
 var orderdetails = require('./routes/orderdetails');
+var orderstatus_change = require('./routes/orderstatus_change');
 
 var app = express();
 
@@ -55,7 +56,8 @@ app.use('/users/ordersplaced', ordersplaced);
 app.use('/users/ordersdelivered', ordersdelivered);
 app.use('/users/delivers_select', delivers_select);
 app.use('/users/discussion',discussion);
-app.use('/users/orderdetails', orderdetails);
+app.use('/orders/details', orderdetails);
+app.use('/orders/status_change', orderstatus_change);
 app.use('/about', about);
 app.use('/contact', contact);
 app.use('/adminview', adminview);
