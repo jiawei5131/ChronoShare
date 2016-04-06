@@ -9,46 +9,51 @@
 <!-- Articles -->
 <div class="container">
   <div class="row">
-    <form role="form" action="/users/receivers" method="post">
       <fieldset>
         <div class="col-md-4">
 
           <!-- Enter Your Address -->
-          <h2>Which order would you like to deliver?</h2>
-          <div class="input-group">
-            <span class="input-group-addon">Order ID</span>
-            <input type="text" class="form-control" placeholder="please enter the order ID you selected" name="orderID" required>
-          </div>
+          <h2>Look through the list we provide and select the order you like</h2>
         </div>
-
-        <div>
-            {{# each orders }}
-                <article class="order">
-                  <div>Item Info</div>
-                    <div>OrderID: {{ this._id }}</div>
-                    <div>Item: {{ this.iteminfo.item }}</div>
-                    <div>Price: {{ this.iteminfo.price }}</div>
-                    <div>Store Location: {{ this.iteminfo.store_location }}</div>
-                    <div>Store ZIP: {{ this.iteminfo.store_zip }}</div>
-                  <div>Receiever Info</div>
-                    <div>Receiver Address: {{ this.receiversinfo.adds }}</div>
-                    <div>Receiver ZIP: {{ this.receiversinfo.zip }}</div>
-                </article>
-            {{/each}}
-        </div>
-
-
         <div class="col-md-4">
           <h2>Click Yes Button</h2>
-          <p>Now, it's time to double check your order. The final step is clicking "YES" Button</p>
-          <input type='submit' value='Yes' class="btn btn-lg btn-primary">
+          <p>Now,if you decided the order you like. The final step is clicking "YES" Button</p>
         </div>
       </fieldset>
-    </form>
 
+    <div>
+    {{# each orders }}
+      <a class="list-group-item">
 
+            <article class="order">
+              <div><b>Item Info</b></div>
+              <p class="list-group-item-text">
+                <div>OrderID: {{ this._id }} </div>
+                <div>Item: {{ this.iteminfo.item }}</div>
+                <div>Price: {{ this.iteminfo.price }}</div>
+                <div>Store Location: {{ this.iteminfo.store_location }}</div>
+                <div>Store ZIP: {{ this.iteminfo.store_zip }}</div>
+              <div><b>Receiever Info</b></div>
+                <div>Receiver Address: {{ this.receiversinfo.adds }}</div>
+                <div>Receiver ZIP: {{ this.receiversinfo.zip }}</div>
+              </p>
+            </article>
 
+        <form role="form" action="/users/delivers_select" method="post" id="selectforms">
+          <fieldset>
+
+              <div class="input-group">
+                <input type="hidden" name="orderID" value={{this._id}} />
+              </div>
+
+              <input type='submit' value='Yes' class="btn btn-lg btn-primary">
+          </fieldset>
+        </form>
+      </a>
+    
+    {{/each}}
+      
+    </div>
   </div>
-
-
 </div>
+
