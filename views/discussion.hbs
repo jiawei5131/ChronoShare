@@ -4,7 +4,35 @@
     <h1 class="display-3">Discussion Board</h1>
     <p>This is the Discussion Board for Our Social Network</p>
   </div>
+
+  <div class="comment">
+  <h3><b>Send Your Comment to the Discussion Board</b></h3>
+    <form class="formContactUs" role="form"
+      action="/users/discussion" method="POST">
+     
+      <div class="form-group">
+        <label for="fieldQues" class="col-sm-2 control-label">
+        Your Comment</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="comment"
+          name="comment">
+        </div>
+      </div> 
+     
+      <div class="form-group">
+        <div class="col-sm-2">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div> 
+     
+    </form>
+   
+  </div> 
+
 </div> <!-- Jumbotrong -->
+
+
+
 
 <!-- Articles -->
 <div class="container">
@@ -21,6 +49,6 @@
       </a>  
     {{/each}}
       
-    </div>
+</div>
 
 

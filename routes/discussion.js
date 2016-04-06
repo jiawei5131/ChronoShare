@@ -3,23 +3,22 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 
-/*router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next) {
 
 	sess = req.session;
 	if(sess.email){
-		//res.render('delivers_select',{loggedin: true});
-		var order = mongoose.model('Order', orderSchema);
-		order.find({}, function (err, doc) {
+		var Disscussion = mongoose.model('Disscussion',DisccusionSchema);
+
+		Disscussion.find({}, function (err, message) {
   			if (err) return handleError(err);
-  			//console.log(doc.email+"\n"+doc.status+"\n"+doc.receiversinfo.adds+"\n"+doc.receiversinfo.zip+"\n"); // Space Ghost is a talk show host.
-  			res.render('delivers_select',{loggedin: true, orders : doc});
+  			res.render('discussion',{loggedin: true, message : message});// Space Ghost is a talk show host.
 		});
 		
 	}
 	else{
 		res.redirect('/users/login');
 	}
-});*/
+});
 
 router.post('/', function(req, res, next) {
 	sess = req.session;
