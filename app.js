@@ -11,6 +11,7 @@ var db = require('./config/db');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var profile = require('./routes/profile');
 var delivers = require('./routes/delivers');
 var delivers_select = require('./routes/delivers_select');
 var discussion = require('./routes/discussion');
@@ -45,6 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/users/profile', profile);
 app.use('/users/delivers', delivers);
 app.use('/users/receivers', receivers);
 app.use('/users/dashboard', dashboard);
