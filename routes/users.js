@@ -111,14 +111,13 @@ router.post('/signup', function(req, res, next){
 
 	user.save(function(err){
 		if (err) {
-			var error = "Something went wrong, please try again"
+			var error = "Something went wrong, please try again";
 			if (err.code === 11000){
-				error = "That email has been registered."
-				res.render('signup', {error: error});
+				error = "That email has been registered.";
 			}
 			res.render('signup', {error: error});
 		}else{
-			var note = "You are now a member."
+			var note = "You are now a member. Please login with your account"
 			res.render('login', {note : note});
 		}
 	});
