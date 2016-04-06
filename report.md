@@ -2,6 +2,11 @@
 
 The main idea of this project is using express js and mongoDB to implement a sharing economy application called ChronoShare.
 
+## Why express and mongoDB?
+"Express is a compact and flexible Node.js web application framework, it has a robust features can be used to develop a single-page, multi-page and hybrid Web applications."(1)
+Compared with using node.js, express can significantly reduce the cost of development, especially for lightweight applications.
+MongoDB is is a highly representative NOSQL, it is agile and scalable.
+
 Performance
 
 We Use ApacheBench to do the stress testing
@@ -121,3 +126,6 @@ Percentage of the requests served within a certain time (ms)
 
  ###############################################################################
 ```
+
+
+(1)http://mean.io/#!/
