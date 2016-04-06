@@ -4,8 +4,14 @@
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Please Sign up</h3>
-                    {{#if error}}
-                        <h4 id="error">{{error}}</h4>
+                   {{#if error}}
+                    <div class="alert alert-danger" id="panel_alert">
+                        <strong>Error!</strong> {{error}}
+                      </div>
+                      {{else if note}}
+                      <div class="alert alert-info" id="panel_alert">
+                          <strong>Info!</strong> {{note}}
+                      </div>
                     {{/if}}
                 </div>
                 <div class="panel-body">

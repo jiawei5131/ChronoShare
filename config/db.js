@@ -31,8 +31,7 @@ orderSchema = Schema({
 	deliversinfo:{
 		delivered: Boolean,
 		email: String
-	},
-	
+	}	
 }, 
 	{ timestamps: { createdAt: 'created_at' } } 
 );
