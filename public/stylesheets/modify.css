@@ -40,6 +40,25 @@ body {
 	display: inline;
 }
 
+#orderdetails_head{
+	color: #58ACFA;
+}
+
+#orderdetails_table{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#table_tittle{
+	padding: 5px;
+	padding-left: 15px;
+	background-color: #BDBDBD;
+}
+
+#orderdetails{
+	padding-left: 25px;
+}
+
 .divider{
     width:50px;
     height:auto;
