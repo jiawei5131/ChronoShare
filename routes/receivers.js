@@ -42,7 +42,8 @@ router.post('/', function(req, res, next){
 			receiversinfo: {
 				adds: receiversadds,
 				zip: receiverszip
-			}
+			},
+			delivered: false
 		});
 
 		order.save(function(err){

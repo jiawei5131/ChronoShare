@@ -1,4 +1,4 @@
-<div class="list-group" id="orderlist">
+<div class="list-group">
   {{#if orders}}
     <h2>List of placed orders</h2>
     {{#orders}}
@@ -6,7 +6,7 @@
       <h4 class="list-group-item-heading">
         {{iteminfo.item}} placed at {{created_at}}</h4>
       <p class="list-group-item-text">
-        {{iteminfo.item}} bought at {{iteminfo.store_location}}, costs ${{iteminfo.price}}
+        {{iteminfo.item}} bought at {{iteminfo.store_location}}, costs ${{iteminfo.price}}.
       </p>
     </a>
     {{/orders}}

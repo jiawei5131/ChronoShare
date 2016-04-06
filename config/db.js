@@ -23,12 +23,15 @@ orderSchema = Schema({
 		store_zip: String
 	},
 	receiversinfo: {
+		received: Boolean,
 		adds: String,
 		zip: String
 	},
 	deliversinfo:{
+		delivered: Boolean,
 		email: String
-	}
+	},
+	
 }, 
 	{ timestamps: { createdAt: 'created_at' } } 
 );
