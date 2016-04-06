@@ -40,6 +40,15 @@ body {
 	display: inline;
 }
 
+#fieldQues{
+	width: 400px;
+	height: 200px;
+}
+
+#marketing{
+	margin-bottom: 20px;
+}
+
 #orderdetails_head{
 	color: #58ACFA;
 }
