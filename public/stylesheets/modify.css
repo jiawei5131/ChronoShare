@@ -49,6 +49,11 @@ body {
 	margin-bottom: 20px;
 }
 
+#comment{
+	width: 400px;
+	height: 30px;
+}
+
 #orderdetails_head{
 	color: #58ACFA;
 }

@@ -20,6 +20,7 @@ var contact = require('./routes/contact');
 var dashboard = require('./routes/dashboard');
 var adminview = require('./routes/adminview');
 var ordersplaced = require('./routes/ordersplaced');
+var ordersdelivered = require('./routes/ordersdelivered')
 var orderdetails = require('./routes/orderdetails');
 
 var app = express();
@@ -49,6 +50,7 @@ app.use('/users/delivers', delivers);
 app.use('/users/receivers', receivers);
 app.use('/users/dashboard', dashboard);
 app.use('/users/ordersplaced', ordersplaced);
+app.use('/users/ordersdelivered', ordersdelivered);
 app.use('/users/delivers_select', delivers_select);
 app.use('/users/discussion',discussion);
 app.use('/users/orderdetails', orderdetails);

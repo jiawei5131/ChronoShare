@@ -1,0 +1,29 @@
+<div class="list-group">
+  {{#if orders}}
+    <h2>List of delivered orders</h2>
+    <div id="orderlist">
+      {{#orders}}
+      <a href="/users/orderdetails?objectId={{_id}}" class="list-group-item" id="orderlist_item">
+        <h4 class="list-group-item-heading">
+          {{iteminfo.item}} placed at {{created_at}}</h4>
+        <p class="list-group-item-text">
+          {{iteminfo.item}} bought at {{iteminfo.store_location}}, costs ${{iteminfo.price}}.
+        </p>
+      </a>
+      {{/orders}}
+    </div>
+  {{else}}
+    <h2>You haven't delivered anything yet...</h2>
+    <p>Your delivered order list is empty...</p>
+    <div class="container" id="recommondations">
+      <h4>People just ordered: </h4>
+        {{#openorders}}
+        <a href="#" class="list-group-item">
+          <p class="list-group-item-text">
+            {{iteminfo.item}} bought at {{iteminfo.store_location}},  costs ${{iteminfo.price}}
+          </p>
+        </a>
+        {{/openorders}}
+    </div>
+  {{/if}}
+</div>
