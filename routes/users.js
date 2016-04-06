@@ -118,7 +118,7 @@ router.post('/signup', function(req, res, next){
 			}
 			res.render('signup', {error: error});
 		}else{
-			var note = "You are now a member."
+			var note = "You are now a member. Please login with your account"
 			res.render('login', {note : note});
 		}
 	});
