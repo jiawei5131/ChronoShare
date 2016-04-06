@@ -19,7 +19,7 @@ var sess;
 });*/
 
 /* GET home page. */
-/*router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next) {
 	sess = req.session;
 
 	if(sess.email){
@@ -30,5 +30,5 @@ var sess;
 	  res.render('dashboard');
 	}
 });
-*/
+
 module.exports = router;
