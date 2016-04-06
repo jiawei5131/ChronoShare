@@ -1,5 +1,6 @@
 # Report
 
+The main idea of this project is using express js and mongoDB to implement a sharing economy application called ChronoShare.
 
 Performance
 
