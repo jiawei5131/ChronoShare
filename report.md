@@ -7,7 +7,7 @@ Performance
 Performance
 
 We Use ApacheBench to do the stress testing
-
+·
 ############################################################################
 Test1: Single User Visting 1000 times
 ############################################################################
@@ -122,3 +122,4 @@ Percentage of the requests served within a certain time (ms)
  100%    962 (longest request)
 
  ###############################################################################
+·
