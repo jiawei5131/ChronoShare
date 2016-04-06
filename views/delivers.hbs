@@ -1,57 +1,57 @@
 <!-- Jumbotron : Welcome message -->
 <div class="jumbotron">
-    <div class="container">
-        <h1 class="display-3">Share Your Time &amp; Earn Money</h1>
-        <p>Chrono Share will match the most rational for you to deliver. What you do is just select an item in</p>
-        <p>our list </p>
-    </div>
+  <div class="container">
+    <h1 class="display-3">Only in 3 simple Steps!</h1>
+    <p>With ChronoShare, you can pick up an order by only 3 simple steps. Here is the magic happen place.</p>
+  </div>
 </div> <!-- Jumbotrong -->
 
 <!-- Articles -->
 <div class="container">
-    <div class="row">
+  <div class="row">
+    <form role="form" action="/users/delivers" method="post">
+      <fieldset>
+          <div class="col-md-4">
 
-        <div class="col-md-4">
+          <!-- Enter the item you want -->
+          <h2>Enter your location</h2>
 
-            <!-- Enter Current Address -->
-            <h2>Enter Where You Are</h2>
-            <p>Please enter the following information:</p>
-            <p>&nbsp;</p>
-            <div>
-                <div class="input-group"><span class="input-group-addon">Current Location</span>
-                    <input type="text" class="form-control" placeholder="normal sized input group">
-                </div>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="placeholder content">
-                    <span class="input-group-addon">Zipcode</span>
-                </div>
-            </div>
-            <p><a class="btn btn-primary" href="#" role="button">Next »</a></p>
+          <!-- Display errors -->
+          {{#if error}}
+            <h3 id="error">{{error}}</h3>
+          {{/if}}
+
+          <div class="input-group">
+            <span class="input-group-addon">Current Location</span>
+            <input type="text" class="form-control" placeholder="please enter your address" name="current_location" required>
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Zip code" name="current_zip" required>
+            <span class="input-group-addon">Zipcode</span>
+          </div>
         </div>
 
         <div class="col-md-4">
-            <h2>Where You Want To Go?</h2>
-            <p>Please enter the following information:</p>
-            <p>&nbsp;</p>
-            <div>
-                <div class="input-group"><span class="input-group-addon">Destination</span>
-                    <input type="text" class="form-control" placeholder="normal sized input group">
-                </div>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="placeholder content">
-                    <span class="input-group-addon">Zipcode</span>
-                </div>
-            </div>
-            <p><a class="btn btn-primary" href="#" role="button">Next »</a></p>
+
+          <!-- Enter Your Address -->
+          <h2>Enter your destination</h2>
+          <div class="input-group">
+            <span class="input-group-addon">Destination</span>
+            <input type="text" class="form-control" placeholder="please enter your address" name="dest_location" required>
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Zip code" name="dest_zip" required>
+            <span class="input-group-addon">Zipcode</span>
+          </div>
         </div>
 
 
         <div class="col-md-4">
-            <h2>Click Yes Button</h2>
-            <p>Now, it's time to double check the information. The final step is clicking "YES" Button</p>
-
-            <p><br>
-            </p>
-            <a type="button" class="btn btn-lg btn-primary" href="./Rflow2.html">Yes </a>
+          <h2>Click Yes Button</h2>
+          <p>Now, it's time to double check your order. The final step is clicking "YES" Button</p>
+          <input type='submit' value='Yes' class="btn btn-lg btn-primary">
         </div>
-    </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
