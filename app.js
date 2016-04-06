@@ -61,6 +61,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+
 app.use('/users/delivers', delivers);
 app.use('/users/receivers', receivers);
 app.use('/users/dashboard', dashboard);

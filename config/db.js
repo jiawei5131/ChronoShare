@@ -30,15 +30,15 @@ orderSchema = Schema({
 	deliversinfo:{
 		email: String
 	}
-	{ timestamps: { createdAt: 'created_at' } } 
+	//{ timestamps: { createdAt: 'created_at' } } 
 });
 
-DisccusionSchema = SChema({
+DisccusionSchema = Schema({
 	firstname: String,
 	content: String,
-	{timestamps: { createdAt: 'created_at' }}
+	//{timestamps: { createdAt: 'created_at' }}
 });
-
+/*
 ProfleSchema = Schema({
 	email: {type: String, unique: true},
 	password: String,
@@ -46,4 +46,4 @@ ProfleSchema = Schema({
 		firstname:String,
 		lastname: String
 	}
-});
+});*/
