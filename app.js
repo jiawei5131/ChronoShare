@@ -17,7 +17,7 @@ var about = require('./routes/about');
 var contact = require('./routes/contact');
 var dashboard = require('./routes/dashboard');
 var adminview = require('./routes/adminview');
-var orders = require('./routes/orders');
+var ordersplaced = require('./routes/ordersplaced');
 
 var app = express();
 
@@ -44,7 +44,7 @@ app.use('/users', users);
 app.use('/users/delivers', delivers);
 app.use('/users/receivers', receivers);
 app.use('/users/dashboard', dashboard);
-app.use('/users/orders', orders);
+app.use('/users/ordersplaced', ordersplaced);
 app.use('/about', about);
 app.use('/contact', contact);
 app.use('/adminview', adminview);
