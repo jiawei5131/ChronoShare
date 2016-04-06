@@ -22,8 +22,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
 	sess = req.session;
-
-	//res.render('delivers_order_success', {loggedin: true});
+	
 	if(sess.email){
 		// user is logged in
 		var message= req.body.comment;
