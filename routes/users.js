@@ -95,7 +95,7 @@ router.post('/signup', function(req, res, next){
 		res.render('signup', {error: error});
 	}
 
-
+	// encrypt the password
 	var encryptedPassword = crypto.createHmac('sha256',appSecret)
                   .update(password)
                   .digest('hex');
