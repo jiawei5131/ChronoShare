@@ -5,6 +5,10 @@ body {
 	padding-top: 3rem;
 }
 
+#panel_alert{
+	margin-top: 20px;
+}
+
 #error{
 	color: red;
 }
@@ -23,6 +27,10 @@ body {
 	margin-top: 20%;
 	width: 60%;
 	max-width: 400px;
+}
+
+#selectforms{
+	margin-bottom: 20px;
 }
 
 #indirection_btns{
