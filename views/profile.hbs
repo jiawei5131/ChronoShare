@@ -1,0 +1,21 @@
+<!-- Jumbotron : Welcome message -->
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">My Profile</h1>
+    <!--<p>With ChronoShare, you can make an order by only 3 simple steps. Here is the magic happen place.</p>-->
+  </div>
+</div> <!-- Jumbotrong -->
+
+<!-- Articles -->
+{{# user}}
+      <a class="list-group-item">
+            <article class="userinfo">
+              <div><b>User Info</b></div>
+              <p class="list-group-item-text">
+                <div>First name: {{ this.name.firstname }} </div>
+                <div>Last name: {{ this.name.lastname }}</div>
+                <div>Email: {{ this.email}}</div>
+              </p>
+            </article>    
+
+{{/user}}
