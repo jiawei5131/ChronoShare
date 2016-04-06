@@ -1,5 +1,23 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
+var hbs = require('handlebars')
+
+//##################################################
+hbs.registerHelper('table', function(data) {
+  var str = '<table>';
+  for (var i = 0; i < data.length; i++ ) {
+    str += '<tr>';
+    for (var key in data[i]) {
+      str += '<td>' + data[i][key] + '</td>';
+    };
+    str += '</tr>';
+  };
+  str += '</table>';
+
+  return new Handlebars.SafeString (str);
+});
+//##################################################
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -20,6 +38,7 @@ var adminview = require('./routes/adminview');
 var ordersplaced = require('./routes/ordersplaced');
 
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
