@@ -27,6 +27,8 @@ router.post('/', function(req, res, next) {
 		//console.log(current_add+dest_add+current_zip+dest_zip );
 
 		res.redirect('/users/delivers_select');
+		//res.redirect('/users/delivers_select?orderid='+ orderid);
+
 
 	}else{
 		// user is not logged in

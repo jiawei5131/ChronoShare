@@ -20,8 +20,10 @@ var contact = require('./routes/contact');
 var dashboard = require('./routes/dashboard');
 var adminview = require('./routes/adminview');
 var ordersplaced = require('./routes/ordersplaced');
+var orderdetails = require('./routes/orderdetails');
 
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -48,7 +50,11 @@ app.use('/users/receivers', receivers);
 app.use('/users/dashboard', dashboard);
 app.use('/users/ordersplaced', ordersplaced);
 app.use('/users/delivers_select', delivers_select);
+<<<<<<< HEAD
 app.use('/users/discussion',discussion);
+=======
+app.use('/users/orderdetails', orderdetails);
+>>>>>>> 020931f0a4a89a93a44f7bc90c1441a8b5e10c02
 app.use('/about', about);
 app.use('/contact', contact);
 app.use('/adminview', adminview);

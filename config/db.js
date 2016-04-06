@@ -16,7 +16,7 @@ userSchema = Schema({
 
 orderSchema = Schema({
 	email: String,
-	status: Number,//0 is in process, 1 is delivered
+	status: Number,//0: placed but not picked up, 1: placed and picked up, 2: delivered but not received, 3: delivered and received, 4: canceled
 	iteminfo: {
 		item: String,
 		price: Number,
@@ -29,18 +29,14 @@ orderSchema = Schema({
 	},
 	deliversinfo:{
 		email: String
-	}	
-}, 
-	{ timestamps: { createdAt: 'created_at' } } 
-);
+	}},
+	{ timestamps: { createdAt: 'created_at' } });
 
 DisccusionSchema = Schema({
 	firstname: String,
-	content: String,
+	content: String
 	},
-
-	{ timestamps: { createdAt: 'created_at' }}
-);
+	{timestamps: { createdAt: 'created_at' }});
 
 ProfleSchema = Schema({
 	email: {type: String, unique: true},
