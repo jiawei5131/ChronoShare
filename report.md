@@ -7,6 +7,9 @@ The main idea of this project is using express js and mongoDB to implement a sha
 
 MongoDB is is a highly representative NOSQL, it is agile and scalable. It can effectively reduced the time which was spent on setting up/designing database (schema) in the past when we decided to start a new development.
 
+## Security Vulnerability
+
+
 ## Performance
 
 We Use ApacheBench to do the stress testing
@@ -127,5 +130,17 @@ Percentage of the requests served within a certain time (ms)
  ###############################################################################
 ```
 
+Because of the good peculiarity of express's productivity, plus the compact and
+reasonable design of the process of this app, during the pressure test session,
+ChornoShare gets a remarkable performance.
+
+We also did some other tests which including locust.io plugin on Heroku, since
+the limited space of the report, it will not be displayed here. The specific 
+reason of this issue will be explained in the corresponding section.
+
+
+## Video Demo
+The following link contains a Video Demo on Youtube of ChronoShare, you are
+welcome to check it out.
 
 (1)http://mean.io/#!/
