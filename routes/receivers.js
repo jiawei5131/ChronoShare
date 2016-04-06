@@ -28,11 +28,13 @@ router.post('/', function(req, res, next){
 		var store_zip = req.body.storeadds;
 		var receiversadds = req.body.receiversadds;
 		var receiverszip = req.body.receiverszip;
+		var order_status = 0;
 
 		var Order = mongoose.model('Order', orderSchema);
 
 		var order = new Order({
 			email: sess.email,
+			status: order_status,
 			iteminfo: {
 				item: item,
 				price: price,

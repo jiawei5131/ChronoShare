@@ -16,6 +16,7 @@ userSchema = Schema({
 
 orderSchema = Schema({
 	email: String,
+	status: Number,//0 is in process, 1 is delivered
 	iteminfo: {
 		item: String,
 		price: Number,
