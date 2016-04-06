@@ -17,10 +17,20 @@ body {
 	color: blue;
 }
 
+#panel_alert{
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 #loginSignup{
 	margin-top: 20%;
 	width: 60%;
 	max-width: 400px;
+}
+
+#selectforms{
+	margin-bottom: 20px;
 }
 
 #indirection_btns{

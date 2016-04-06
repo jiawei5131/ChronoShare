@@ -10,7 +10,7 @@
 
 <body>
 
-<!-- References a Handlebars partial in views/partials/bsnavbar.handlebars -->
+<!-- References a Handlebars partial in views/partials/navbar.handlebars -->
 {{>navbar}}
 
 <!-- The HTML for each view goes here -->
@@ -19,31 +19,9 @@
 </div>
 
 <hr>
-  
-<!-- Footer -->
-<footer class="footer">
-  <p>© Company 2016</p>
-</footer>
+ 
+ <!-- Footer -->
+{{>footer}} 
 
-<!-- jQuery -->
-<script src="/javascripts/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/javascripts/bootstrap.min.js"></script>
-
-{{#if adminview}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>
-    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-    </script>
-    <script src="../../../Documents/GitHub/DRPickup/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('#example').DataTable();
-    });
-    </script>
-{{/if}}
 </body>
 </html>
