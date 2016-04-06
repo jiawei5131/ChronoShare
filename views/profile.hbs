@@ -1,0 +1,75 @@
+<!-- Jumbotron : Welcome message -->
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="display-3">My Profile</h2>
+    <!--<p>With ChronoShare, you can make an order by only 3 simple steps. Here is the magic happen place.</p>-->
+  </div>
+</div> <!-- Jumbotrong -->
+
+
+{{#user}}
+<div  id="userinfo_name">  
+  <div class="row">
+    <div class="col-md-6">
+      <h4 id="table_tittle">Name</h4>
+      <div id="orderdetails">
+        <p>First name: {{ this.name.firstname }}</p> 
+        <p>Last name: {{ this.name.lastname }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row" id="userinfo_email">
+    <div class="col-md-6">
+      <h4 id="table_tittle">Email</h4>
+      <div id="orderdetails">
+        <p>Email: {{ this.email}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="userinfo_gender">
+    <div class="col-md-6">
+      <h4 id="table_tittle">Gender</h4>
+      <div id="orderdetails">
+        <p>Unknown</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="userinfo_age">
+    <div class="col-md-6">
+      <h4 id="table_tittle">Age</h4>
+      <div id="orderdetails">
+        <p>Unknown</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="userinfo_fb">
+    <div class="col-md-6">
+      <h4 id="table_tittle">Facebook Account</h4>
+      <div id="orderdetails">
+        <p>Unknown</p>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+{{/user}}
+
+<!-- Articles -->
+<!--{{# user}}
+      <a class="list-group-item">
+            <article class="userinfo">
+              <div><b>User Info</b></div>
+              <p class="list-group-item-text">
+                <div>First name: {{ this.name.firstname }} </div>
+                <div>Last name: {{ this.name.lastname }}</div>
+                <div>Email: {{ this.email}}</div>
+              </p>
+            </article>    
+
+{{/user}}-->
