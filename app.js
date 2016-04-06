@@ -23,6 +23,7 @@ var orderdetails = require('./routes/orderdetails');
 
 var app = express();
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', exphbs({defaultLayout: 'main'}));
