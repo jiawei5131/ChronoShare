@@ -1,15 +1,17 @@
 <div class="list-group">
   {{#if orders}}
     <h2>List of placed orders</h2>
-    {{#orders}}
-    <a href="#" class="list-group-item">
-      <h4 class="list-group-item-heading">
-        {{iteminfo.item}} placed at {{created_at}}</h4>
-      <p class="list-group-item-text">
-        {{iteminfo.item}} bought at {{iteminfo.store_location}}, costs ${{iteminfo.price}}.
-      </p>
-    </a>
-    {{/orders}}
+    <div id="orderlist">
+      {{#orders}}
+      <a href="/users/orderdetails?objectId={{_id}}" class="list-group-item" id="orderlist_item">
+        <h4 class="list-group-item-heading">
+          {{iteminfo.item}} placed at {{created_at}}</h4>
+        <p class="list-group-item-text">
+          {{iteminfo.item}} bought at {{iteminfo.store_location}}, costs ${{iteminfo.price}}.
+        </p>
+      </a>
+      {{/orders}}
+    </div>
   {{else}}
     <h2>You haven't ordered anything yet...</h2>
     <p>Your order list is empty...</p>
