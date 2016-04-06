@@ -35,3 +35,54 @@
 	</div>
 </div>
 {{/with}}
+	<!-- change this part according to status -->
+{{#if status0}}
+	<div class="row">
+		<div class="col-md-12">
+			<h4 id="table_tittle">Status: Placed</h4>
+			<div id="orderdetails">
+				<p>Your order has just placed. 
+					No one has picked up your order yet...</p> 
+				<a href="#" class="btn btn-primary" role="button">Cancel the order</a>
+			</div>
+		</div>
+	</div>
+	{{else if status1}}
+	<div class="row">
+		<div class="col-md-12">
+			<h4 id="table_tittle">Status: Picked Up</h4>
+			<div id="orderdetails">
+				<p>User {{deliversinfo.email}} has picked up your order...</p> 
+				<p>Please be patient, your item will be with you soon!</p>
+			</div>
+		</div>
+	</div>
+	{{else if status2}}
+	<div class="row">
+		<div class="col-md-12">
+			<h4 id="table_tittle">Status: Delivered</h4>
+			<div id="orderdetails">
+				<p>User {{deliversinfo.email}} has delivered the item...</p> 
+			</div>
+		</div>
+	</div>
+	{{else if status3}}
+	<div class="row">
+		<div class="col-md-12">
+			<h4 id="table_tittle">Status: Finished</h4>
+			<div id="orderdetails">
+				<p>Item is delivered by user {{deliversinfo.email}}</p> 
+				<p>Item is reported to be received by user {{email}}</p>
+			</div>
+		</div>
+	</div>
+	{{else}}
+	<div class="row">
+		<div class="col-md-12">
+			<h4 id="table_tittle">Status: Canceled</h4>
+			<div id="orderdetails">
+				<p>The order has been canceled</p> 
+			</div>
+		</div>
+	</div>
+{{/if}}
