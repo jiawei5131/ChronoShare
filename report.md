@@ -5,7 +5,7 @@ The main idea of this project is using express js and mongoDB to implement a sha
 ## Why express and mongoDB?
 "Express is a compact and flexible Node.js web application framework, it has a robust features can be used to develop a single-page, multi-page and hybrid Web applications."(1) Compared with using node.js, express can significantly reduce the cost of development, especially for lightweight applications.
 
-MongoDB is is a highly representative NOSQL, it is agile and scalable.
+MongoDB is is a highly representative NOSQL, it is agile and scalable. It can effectively reduced the time which was spent on setting up/designing database (schema) in the past when we decided to start a new development.
 
 Performance
 
