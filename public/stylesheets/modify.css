@@ -5,6 +5,10 @@ body {
 	padding-top: 3rem;
 }
 
+#panel_alert{
+	margin-top: 20px;
+}
+
 #error{
 	color: red;
 }
