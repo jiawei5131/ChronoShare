@@ -43,7 +43,7 @@
 			<div id="orderdetails">
 				<p>Your order has just placed. 
 					No one has picked up your order yet...</p> 
-				<a href="#" class="btn btn-primary" role="button">Cancel the order</a>
+				<a href="/orders/status_change?objectId={{order._id}}&amp;newStatus=4" class="btn btn-primary" role="button">Cancel the order</a>
 			</div>
 		</div>
 	</div>
@@ -62,7 +62,8 @@
 		<div class="col-md-12">
 			<h4 id="table_tittle">Status: Delivered</h4>
 			<div id="orderdetails">
-				<p>User {{deliversinfo.email}} has delivered the item...</p> 
+				<p>User {{deliversinfo.email}} has delivered the item...</p>
+				<a href="/orders/status_change?objectId={{order._id}}&amp;newStatus=3" class="btn btn-primary" role="button">I have received my item</a> 
 			</div>
 		</div>
 	</div>

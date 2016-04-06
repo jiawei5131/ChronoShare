@@ -1,0 +1,64 @@
+<h3 id="orderdetails_head">Order Status Updated</h3>
+<p>The content displayed below is the details of your orders...</p>
+
+	<!-- change this part according to status -->
+	<div class='col-md-12'>
+		<h4 id="table_tittle">The status of your order has changed..</h4>
+	{{#if status3}}
+	<div class="row">
+		<div class="col-md-12">
+			<h4 id="table_tittle">Status: Finished</h4>
+			<div id="orderdetails">
+				<p>Item is delivered by user {{deliversinfo.email}}</p> 
+				<p>Item is reported to be received by user {{email}}</p>
+			</div>
+		</div>
+	</div>
+	{{else if status4}}
+	<div class="row">
+		<div class="col-md-12">
+			<h4 id="table_tittle">Status: Canceled</h4>
+			<div id="orderdetails">
+				<p>The order has been canceled</p> 
+			</div>
+		</div>
+	</div>
+{{/if}}
+
+{{#with order}}
+<div  id="orderdetails_table">	
+	<div class="row">
+		<div class="col-md-12">	
+			<h4 id="table_tittle">Order ID #: {{_id}}</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h4 id="table_tittle">Delivery Address: </h4>
+			<div id="orderdetails">
+				<p>{{receiversinfo.adds}}</p> 
+				<p>ZIP {{receiversinfo.zip}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="orderdetails_table_item">
+		<div class="col-md-6">
+			<h4 id="table_tittle">Item Bought: </h4>
+			<div id="orderdetails">
+				<p>{{iteminfo.item}}</p>
+				<h5>Price: ${{iteminfo.price}}</h5> 
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h4 id="table_tittle">Store Location: </h4>
+			<div id="orderdetails">
+				<p>{{iteminfo.store_location}}</p>
+				<p>ZIP {{iteminfo.store_zip}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+{{/with}}
+
+<a href="/orders/details?objectId={{order._id}}" class="btn btn-primary" role="button">Return to order details page</a>
+
