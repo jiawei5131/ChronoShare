@@ -37,6 +37,15 @@ body {
 	display: inline;
 }
 
+#fieldQues{
+	width: 400px;
+	height: 200px;
+}
+
+#marketing{
+	margin-bottom: 20px;
+}
+
 .divider{
     width:50px;
     height:auto;

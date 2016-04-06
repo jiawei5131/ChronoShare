@@ -33,3 +33,20 @@ orderSchema = Schema({
 }, 
 	{ timestamps: { createdAt: 'created_at' } } 
 );
+
+DisccusionSchema = Schema({
+	firstname: String,
+	content: String,
+	},
+
+	{ timestamps: { createdAt: 'created_at' }}
+);
+
+ProfleSchema = Schema({
+	email: {type: String, unique: true},
+	password: String,
+	name:{
+		firstname:String,
+		lastname: String
+	}
+});
