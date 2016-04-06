@@ -1,23 +1,5 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
-var hbs = require('handlebars')
-
-//##################################################
-hbs.registerHelper('table', function(data) {
-  var str = '<table>';
-  for (var i = 0; i < data.length; i++ ) {
-    str += '<tr>';
-    for (var key in data[i]) {
-      str += '<td>' + data[i][key] + '</td>';
-    };
-    str += '</tr>';
-  };
-  str += '</table>';
-
-  return new Handlebars.SafeString (str);
-});
-//##################################################
-
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -37,6 +19,7 @@ var contact = require('./routes/contact');
 var dashboard = require('./routes/dashboard');
 var adminview = require('./routes/adminview');
 var ordersplaced = require('./routes/ordersplaced');
+var orderdetails = require('./routes/orderdetails');
 
 var app = express();
 
@@ -66,6 +49,7 @@ app.use('/users/receivers', receivers);
 app.use('/users/dashboard', dashboard);
 app.use('/users/ordersplaced', ordersplaced);
 app.use('/users/delivers_select', delivers_select);
+app.use('/users/orderdetails', orderdetails);
 app.use('/about', about);
 app.use('/contact', contact);
 app.use('/adminview', adminview);

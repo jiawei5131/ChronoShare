@@ -9,12 +9,15 @@ body {
 	margin-top: 20px;
 }
 
-#error{
-	color: red;
+#orderlist{
+	margin-top: 30px;
+	border
+
 }
 
-#note{
-	color: blue;
+#orderlist_item{
+	margin: 5px;
+	border-width: 2px;
 }
 
 #panel_alert{
@@ -35,6 +38,25 @@ body {
 
 #indirection_btns{
 	display: inline;
+}
+
+#orderdetails_head{
+	color: #58ACFA;
+}
+
+#orderdetails_table{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#table_tittle{
+	padding: 5px;
+	padding-left: 15px;
+	background-color: #BDBDBD;
+}
+
+#orderdetails{
+	padding-left: 25px;
 }
 
 .divider{
