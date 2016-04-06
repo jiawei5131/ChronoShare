@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 		all_order.find({ 'status': '0' }, function (err, order) {
   			if (err) return handleError(err);
   			res.render('delivers_select',{loggedin: true, orders : order});// Space Ghost is a talk show host.
-		})
+		});
 	}
 	else{
 		res.redirect('/users/login');

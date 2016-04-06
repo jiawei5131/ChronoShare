@@ -1,0 +1,26 @@
+<!-- Jumbotron : Welcome message -->
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Discussion Board</h1>
+    <p>This is the Discussion Board for Our Social Network</p>
+  </div>
+</div> <!-- Jumbotrong -->
+
+<!-- Articles -->
+<div class="container">
+    {{# each message }}
+      <a class="list-group-item">
+
+            <article class="order">
+              <div><b>Comment</b></div>
+              <p class="list-group-item-text">
+                <div>Name: {{ this.firstname }} </div>
+                <div>Message: {{ this.content }}</div>
+              </p>
+            </article>
+      </a>  
+    {{/each}}
+      
+    </div>
+
+
