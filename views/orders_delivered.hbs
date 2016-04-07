@@ -3,7 +3,7 @@
     <h2>List of delivered orders</h2>
     <div id="orderlist">
       {{#orders}}
-      <a href="/users/orderdetails?objectId={{_id}}" class="list-group-item" id="orderlist_item">
+      <a href="/orders/details?objectId={{_id}}" class="list-group-item" id="orderlist_item">
         <h4 class="list-group-item-heading">
           {{iteminfo.item}} placed at {{created_at}}</h4>
         <p class="list-group-item-text">

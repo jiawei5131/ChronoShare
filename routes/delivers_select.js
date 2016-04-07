@@ -31,11 +31,8 @@ router.post('/', function(req, res, next){
 			order.deliversinfo.email = sess.email;
 			order.status = 1;
 			order.save();
-			//console.log('%s %s is a %s.', person.name.first, person.name.last, person.occupation) 
-			//console.log('%s',order.deliversinfo);
 		});
 		res.render('delivers_order_success', {loggedin: true});
-		//console.log(order);
 	}
 	else{
 		res.redirect('/users/login');
